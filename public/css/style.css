@@ -1,0 +1,84 @@
+/* início das novidades */
+div.bloco-inferior {
+    margin: 0px auto;
+}
+
+div.novidades {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.novo {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+img.img-novo {
+    width: 200px;
+    height: 200px;
+}
+
+div.chamada-novo {
+    margin-top: 2%;
+    padding: 1%;
+    width: 88%;
+    text-align: justify;
+}
+
+a.texto-novo {
+    border-top: 2px solid #E2BE76;
+    font-size: 16px;
+    color: #0662AD;
+    font-weight: 500;
+    display: block;
+}
+
+a.texto-novo:hover {
+    text-decoration: none;
+    color: #0662AC;
+}
+
+
+
+
+
+
+
+
+/* Previous button  */
+.media-carousel .carousel-control.left {
+    left: -12px;
+    background-image: none;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    height: 40px;
+    width: 40px;
+    margin-top: 30px
+}
+
+/* Next button  */
+.media-carousel .carousel-control.right {
+    right: -12px !important;
+    background-image: none;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    height: 40px;
+    width: 40px;
+    margin-top: 30px
+}
+
+/* Changes the position of the indicators */
+.media-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+

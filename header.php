@@ -9,14 +9,16 @@
     <!-- CSS -->
     <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/public/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/style.css">
-    <link rel="stylesheet" type="text/css"
-        href="<?php bloginfo("template_directory"); ?>/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- JS -->
     <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/js/jquery-3.3.1.min.js">
     </script>
     <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/js/script.js">
     </script>
 
     <title>Guarulhos GRU</title>
@@ -134,16 +136,7 @@
                 <input type="checkbox" id="btn_menu" checked>
                 <label class="btn_menu" for="btn_menu">&#9776;</label>
 
-                <div class="barra_navegacao col-2" style="right: -15%; z-index: 10;">
-                    <div class="menu">
-                        <ul>
-                            <li class="page_item">
-                                <a class="page_link" href="<?= get_site_url() . "/gruloja"; ?>">GRU Loja</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="barra_navegacao col-10">
+                <div class="barra_navegacao">
                     <?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
                 </div>
             </div>
