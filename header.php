@@ -34,11 +34,10 @@
     <section>
         <nav>
             <div class="menu-barra-superior">
-                
                 <?xml version="1.0" standalone="no"?>
                 <!DOCTYPE svg
                     PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                <a href="index.php" class="logo-svg">
+                <a href="<?= get_site_url(); ?>" class="logo-svg" style="z-index: 10;">                
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.000000 225.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)" fill="#0662ad"
                             stroke="none">
@@ -142,9 +141,17 @@
                 <input type="checkbox" id="btn_menu" checked>
                 <label class="btn_menu" for="btn_menu">&#9776;</label>
 
-                <div class="barra_navegacao">
-                    <?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
+                <div class="barra_navegacao col-md-2 gru_shop" style="right: -15%; z-index: 10;">
+                    <div class="menu">
+                        <ul>
+                            <li class="page_item">
+                                <a class="page_link" href="http://localhost/wordpress/">Site Oficial</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="barra_navegacao col-md-10 botoes">
+                <?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
             </div>
         </nav>
     </section>

@@ -606,6 +606,7 @@ iframe.video-hino {
 
     /* início da barra superior */
     .menu-barra-superior {
+        position: relative;
         height: 200px;
         background-color: #0662AD;
         display: flex;
@@ -632,9 +633,14 @@ iframe.video-hino {
         background-color: #E2BE76;
         width: 75px;
         height: 75px;
-        margin-top: 150px;
-        margin-left: 42%;
+        margin-top: 0;
+        margin-left: 0;
         position: absolute;
+        left: 50%;
+        top: 92%;
+        bottom: auto;
+        right: auto;
+        transform: translate(-50%, -50%);
     }
 
     /* início mídias sociais */
@@ -691,6 +697,17 @@ iframe.video-hino {
         top: 210px;
     }
 
+    div.gru_shop {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    div.botoes {
+        position: absolute;
+        top: 0px;
+    }
+
     li.page_item {
         background-color: #E2BE76;
         border-bottom: 2px solid #0662AD;
@@ -709,9 +726,13 @@ iframe.video-hino {
     }
 
     label[for="btn_menu"] {
-        color: #0662AD;
+        color: #0662ad;
         text-align: center;
         font-size: 30px;
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        z-index: 10;
     }
 
     #btn_menu:checked~div.barra_navegacao {
@@ -729,6 +750,7 @@ iframe.video-hino {
         height: 50px;
         padding-top: 10px;
         position: absolute;
+        z-index: 10;
     }
 
     /* início carrossel */
