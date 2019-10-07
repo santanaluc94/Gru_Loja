@@ -1,4 +1,10 @@
 /* início das novidades */
+div.bloco-novidades {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 div.bloco-inferior {
     margin: 0px auto;
 }
@@ -10,21 +16,26 @@ div.novidades {
 }
 
 div.novo {
-    width: 33%;
+    position: relative;
+    max-width: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    min-height: 200px;
     align-items: center;
-    margin-bottom: 2%;
+    margin: 10px auto 2% auto;
+    height: 325px;
 }
 
 img.img-novo {
     width: 200px;
     height: 200px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 div.chamada-novo {
-    margin-top: 2%;
+    margin-top: 5%;
     padding: 1%;
     width: 88%;
     text-align: justify;
@@ -32,10 +43,11 @@ div.chamada-novo {
 
 a.texto-novo {
     border-top: 2px solid #E2BE76;
-    font-size: 16px;
+    font-size: 18px;
     color: #0662AD;
     font-weight: 500;
     display: block;
+    font-weight: 600;
 }
 
 a.texto-novo:hover {
@@ -43,12 +55,30 @@ a.texto-novo:hover {
     color: #0662AC;
 }
 
+div.comprar {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+}
 
+span.comprar {
+    color: #0662AC;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 0px;
+    left: 0px;
+}
 
-
-
-
-
+button.comprar {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0662AC;
+    color: white;
+}
 
 /* Previous button  */
 .media-carousel .carousel-control.left {

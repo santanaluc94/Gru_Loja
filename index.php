@@ -63,43 +63,43 @@
                 <span class="titulo-pagina">Novidades</span>
             </h1>
         </div>
-
-        <?php if(have_posts()): ?>
-        <div class="novidades carousel slide media-carousel" id="media">
-            <div class="bloco-inferior row">
-                <?php 
-                    $argumentos = array(
-                        'post_type' => 'product',
-                        'posts_per_page' => 9,
-                    );
-                    $query = new WP_Query($argumentos);
-                ?>
-                <?php if($query->have_posts()): ?>
-                <?php $post = $posts[0]; ?>
-                <?php $contador_vitrine = 0; ?>
-                <?php $contador_produto = 0; ?>
-                <div class="novidades carousel-inner">
+        <?php 
+            $argumentos = array(
+                'post_type' => 'product',
+                'posts_per_page' => 9,
+            );
+            $query = new WP_Query($argumentos);
+        ?>
+        <?php if($query->have_posts()): ?>
+        <?php $post = $posts[0]; ?>
+        <div class="bloco-novidades" id="novidades">
+            <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">>‹</button>
+            <div class="bloco-inferior">
+                <div class="novidades">
                     <?php while($query->have_posts()): ?>
                     <?php $query->the_post(); ?>
-
-                    <div class="novo col-md-4 <?php if ($contador_produto < 3) {echo "active";} ?>">
+                    <?php if($product->get_stock_status()): ?>
+                    <div class="novo">
                         <?php the_post_thumbnail('post_thumbnail', array('class' => 'img-novo')); ?>
                         <div class="chamada-novo">
                             <a class="texto-novo" href="<?= get_permalink(); ?>"><?= the_title() ?></a>
+                            <div class="comprar col-12">
+                                <span class="comprar">Preço: <?= $product->price ?></span>
+                                <button class="btn btn-sm comprar ">Comprar</button>
+                            </div>
                         </div>
                     </div>
-
-                    <?php $contador_produto++; ?>
-                    <?php endwhile; ?>
+                    <?php wp_reset_query(); ?>
                     <?php else: ?>
-                    <h5>Não temos nenhuma postagem marcada como "Matéria" em Destaques no momento.</h5>
+                    <h3>Não temos produtos em estoque</h3>
+                    <?php endif; ?>
+                    <?php endwhile; ?>
                 </div>
-                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-                <a data-slide="next" href="#media" class="right carousel-control">›</a>
-                <?php endif; ?>
-                <?php wp_reset_query(); ?>
             </div>
+            <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">></button>
         </div>
+        <?php else: ?>
+        <h5>Não temos nenhuma postagem marcada como "Matéria" em Destaques no momento.</h5>
         <?php endif; ?>
     </section>
 

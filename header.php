@@ -8,10 +8,12 @@
 
     <!-- CSS -->
     <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/public/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/public/slick/slick/slick-theme.css" />
 
     <!-- JS -->
     <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/js/jquery-3.3.1.min.js">
@@ -19,6 +21,10 @@
     <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/bootstrap/js/bootstrap.min.js">
     </script>
     <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/js/script.js">
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js">
+    </script>
+    <script type="text/javascript" src="<?php bloginfo("template_directory"); ?>/public/slick/slick/slick.min.js">
     </script>
 
     <title>Guarulhos GRU</title>
