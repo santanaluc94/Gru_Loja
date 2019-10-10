@@ -1,10 +1,17 @@
 $(document).ready(function () {
+    $('#promocoes').slick({
+        interval: false,
+        dots: true,
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+    });
+
     $('#novidades').slick({
         interval: false,
         dots: true,
         infinite: false,
-        // arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
     });
 });
