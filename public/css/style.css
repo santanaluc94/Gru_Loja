@@ -3,35 +3,27 @@ div.bloco-novidades {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-
-div.bloco-inferior {
     margin: 0px auto;
 }
 
-div.novidades {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+button.slick-arrow:before {
+    font-size: 25px;
+    color: #0662AC;
 }
 
 div.novo {
     position: relative;
-    max-width: 300px;
-    width: 300px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 10px auto 2% auto;
     height: 325px;
+    padding: 0px 25px;
 }
 
 img.img-novo {
     width: 200px;
     height: 200px;
     position: relative;
-    margin-top: 15px;
-    margin-bottom: 0;
+    margin: 15px auto 0 auto;
 }
 
 div.chamada-novo {
@@ -48,6 +40,7 @@ a.texto-novo {
     font-weight: 500;
     display: block;
     font-weight: 600;
+    text-align: center;
 }
 
 a.texto-novo:hover {

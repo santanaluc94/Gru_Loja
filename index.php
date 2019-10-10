@@ -73,31 +73,27 @@
         <?php if($query->have_posts()): ?>
         <?php $post = $posts[0]; ?>
         <div class="bloco-novidades" id="novidades">
-            <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">>‹</button>
-            <div class="bloco-inferior">
-                <div class="novidades">
-                    <?php while($query->have_posts()): ?>
-                    <?php $query->the_post(); ?>
-                    <?php if($product->get_stock_status()): ?>
-                    <div class="novo">
-                        <?php the_post_thumbnail('post_thumbnail', array('class' => 'img-novo')); ?>
-                        <div class="chamada-novo">
-                            <a class="texto-novo" href="<?= get_permalink(); ?>"><?= the_title() ?></a>
-                            <div class="comprar col-12">
-                                <span class="comprar">Preço: <?= $product->price ?></span>
-                                <button class="btn btn-sm comprar ">Comprar</button>
-                            </div>
+                <?php while($query->have_posts()): ?>
+                <?php $query->the_post(); ?>
+                <?php if($product->get_stock_status()): ?>
+                <div class="novo">
+                    <?php the_post_thumbnail('post_thumbnail', array('class' => 'img-novo')); ?>
+                    <div class="chamada-novo">
+                        <a class="texto-novo" href="<?= get_permalink(); ?>"><?= the_title() ?></a>
+                        <div class="comprar col-12">
+                            <span class="comprar">R$ <?= str_replace(".", ",", $product->price) ?></span>
+                            <button class="btn btn-sm comprar">
+                                <i class="comprar fa fa-shopping-cart" aria-hidden="true" style="font-size: 16px"></i>&nbsp Comprar
+                                </button>
                         </div>
                     </div>
-                    <?php wp_reset_query(); ?>
-                    <?php else: ?>
-                    <h3>Não temos produtos em estoque</h3>
-                    <?php endif; ?>
-                    <?php endwhile; ?>
                 </div>
+                <?php wp_reset_query(); ?>
+                <?php else: ?>
+                <h3>Não temos produtos em estoque</h3>
+                <?php endif; ?>
+                <?php endwhile; ?>
             </div>
-            <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">></button>
-        </div>
         <?php else: ?>
         <h5>Não temos nenhuma postagem marcada como "Matéria" em Destaques no momento.</h5>
         <?php endif; ?>
