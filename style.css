@@ -678,11 +678,13 @@ iframe.video-hino {
     div.menu-barra-inferior {
         height: 60px;
         border-bottom: 3px solid #0662AD;
+        position: relative;
     }
 
     div.menu {
         font-size: 18px;
     }
+
 
     .barra_navegacao ul {
         position: static;
@@ -694,9 +696,12 @@ iframe.video-hino {
         left: 0px;
         padding: 0px;
         width: 100%;
-        top: 210px;
+        top: 55px;
     }
 
+    .gru_shop ul {
+        top: 10px;
+    }
     div.gru_shop {
         position: absolute;
         top: 0px;
